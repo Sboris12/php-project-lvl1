@@ -7,11 +7,13 @@
         }
     },
     "authors": [{
-        "name": "Boris12"
+        "name": "Sboris12"
     }],
     "require": {},
 
     "bin": [
         "bin/brain-games"
-    ]
+    ],
+
+    "license": "MIT"
 }
