@@ -17,4 +17,6 @@ use function src\Cli\hellow;
 use function cli\line;
 use function cli\prompt;
 
-//echo hellow($name);
+$name = '';
+
+echo hellow($name);
