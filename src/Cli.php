@@ -1,7 +1,6 @@
-#!/usr/bin/env php
-
 <?php
 
+namespace src\Cli;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -11,10 +10,14 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-
-
-use function src\Cli\hellow;
 use function cli\line;
 use function cli\prompt;
 
-//echo hellow($name);
+
+
+function hellow($name)
+{
+   line('Welcome to the Brain Game!');
+   $name = prompt('May I have your name?');
+   line("Hello, %s!", $name);
+}
