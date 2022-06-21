@@ -7,7 +7,9 @@
         },
         "files": [
             "src/Cli.php",
-            "src/even.php"
+            "src/Engine.php",
+            "src/Games/Even.php",
+            "src/Games/Calc.php"
         ]
     },
     "authors": [{
@@ -22,7 +24,8 @@
 
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
 
     "license": "MIT"
