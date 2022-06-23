@@ -3,14 +3,20 @@
 namespace src\Games\Even;
 
 use function cli\line;
-use function cli\prompt;
 
 use function src\Cli\hellow;
 use function src\Engine\engine;
 
-$name = hellow();
+function start()
+{
+    $name = hellow();
 
-line('Answer "yes" if the number is even, otherwise answer "no".');
+    line('Answer "yes" if the number is even, otherwise answer "no".');
+
+    $game = 'src\\Games\\Even\\even';
+
+    engine($game, $name);
+}
 
 function even()
 {
@@ -21,12 +27,6 @@ function even()
         $answer = 'yes';
     } else {
         $answer = 'no';
-        }
-        return [$question, $answer];
+    }
+    return [$question, $answer];
 }
-
-$game = 'even';
-
-engine($game, $name);
-
-

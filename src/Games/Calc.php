@@ -3,14 +3,20 @@
 namespace src\Games\Calc;
 
 use function cli\line;
-use function cli\prompt;
 
 use function src\Cli\hellow;
 use function src\Engine\engine;
 
-$name = hellow();
+function start()
+{
+    $name = hellow();
 
-line('What is the result of the expression?');
+    line('What is the result of the expression?');
+
+    $game = 'src\\Games\\Calc\\calc';
+
+    engine($game, $name);
+}
 
 function calc()
 {
@@ -32,9 +38,4 @@ function calc()
     $question = "$num1 $operator $num2";
 
     return [$question, $answer];
-
 }
-
-$game = 'calc';
-
-engine($game, $name);
