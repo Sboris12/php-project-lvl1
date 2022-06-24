@@ -23,7 +23,7 @@ function gcd()
     $num1 = mt_rand(1, 100);
     $num2 = mt_rand(1, 100);
     
-    $question = "$num1 $num2";
+    $question = "{$num1} {$num2}";
 
     $answer = gmp_gcd($num1, $num2); 
 
